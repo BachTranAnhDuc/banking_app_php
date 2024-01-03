@@ -6,6 +6,16 @@
     <title>BA Staff</title>
 </head>
 <body>
-    
+   <main>
+    <header>This is header</header>
+    <navigation>
+        <ul>
+            <li>
+                <a href="index.php">Menu</a>
+            </li>
+        </ul>
+    </navigation>
+    <footer>This is footer</footer>
+   </main> 
 </body>
 </html>
