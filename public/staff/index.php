@@ -9,7 +9,9 @@
 
     <div>
         <ul>
-            <li><a href=<?php echo 'subjects/index.php'?>>Subject menu</a></li>
+            <li><a href=<?php echo url_for('subjects/index.php') ?>>Subject menu</a></li>
+
+            <li><a href=<?php echo url_for('pages/index.php') ?>>Page</a></li>
         </ul>
 
         <?php echo WWW_ROOT; ?>
