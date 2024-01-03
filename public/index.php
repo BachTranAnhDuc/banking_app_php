@@ -9,6 +9,7 @@
 <body>
   <main>
     <h1 class="text-xl text-red-500">Banking App is comming soon!</h1>
+    <?php echo $_SERVER['SCRIPT_NAME']; ?>
   </main>
 </body>
 </html>

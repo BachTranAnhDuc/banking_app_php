@@ -17,7 +17,7 @@ if (!isset($page_title)) {
         <navigation>
             <ul>
                 <li>
-                    <a href="index.php">Menu</a>
+                    <a href=<?php echo url_for('index.php'); ?>>Menu</a>
                 </li>
             </ul>
         </navigation>
