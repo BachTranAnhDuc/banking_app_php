@@ -1,6 +1,6 @@
 <?php require_once('../../private/initialize.php') ?>
 
-<?php $page_title='Staff Menu' ?>
+<?php $page_title='Staff Menu'; $css_link="../stylesheets/dist/style.css" ?>
 
 <?php include(SHARE_PATH . '/staff/header/header.php') ?>
 

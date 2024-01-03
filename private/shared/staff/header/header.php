@@ -8,8 +8,8 @@ if (!isset($page_title)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../stylesheets/dist/style.css" rel="stylesheet"/>
-    <title>BA <?php echo $page_title ?></title>
+    <link href=<?php echo $css_link; ?> rel="stylesheet"/>
+    <title>BA <?php echo $page_title; ?></title>
 </head>
 <body>
    <main class="grid gap-y-8">
