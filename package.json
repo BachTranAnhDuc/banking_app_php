@@ -1,0 +1,15 @@
+{
+  "name": "banking_app_php",
+  "version": "1.0.0",
+  "description": "Banking App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tailwindcss -i ./public/stylesheets/main.css -o ./public/stylesheets/dist/style.css --watch"
+  },
+  "author": "Bach Tran Anh Duc",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
