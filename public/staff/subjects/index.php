@@ -1,11 +1,64 @@
 <?php require_once('../../../private/initialize.php') ?>
 
+<?php
+  $subjects = [
+    ['id' => '1', 'position' => '1', 'visible' => '1', 'menu_name' => 'About Globe Bank'],
+    ['id' => '2', 'position' => '2', 'visible' => '1', 'menu_name' => 'Consumer'],
+    ['id' => '3', 'position' => '3', 'visible' => '1', 'menu_name' => 'Small Business'],
+    ['id' => '4', 'position' => '4', 'visible' => '1', 'menu_name' => 'Commercial'],
+  ];
+?>
+
 <?php $page_title='Staff Object'; $css_link="../../stylesheets/dist/style.css"?>
 
 <?php include(SHARE_PATH . '/staff/header/header.php') ?>
 
 <div class="max-w-7xl w-full bg-blue-50 px-8 py-4 justify-self-center">
-    <h1 class="text-2xl font-bold text-pink-500">This is content Object</h1>
+  <div>
+    <h1>Subjects</h1>
+
+    <div>
+      <a href="">Create New Subject</a>
+    </div>
+
+  	<table>
+  	  <tr>
+        <th>ID</th>
+
+        <th>Position</th>
+
+        <th>Visible</th>
+
+  	    <th>Name</th>
+
+  	    <th>&nbsp;</th>
+
+  	    <th>&nbsp;</th>
+
+        <th>&nbsp;</th>
+  	  </tr>
+
+      <?php foreach($subjects as $subject) { ?>
+        <tr>
+          <td><?php echo $subject['id']; ?></td>
+
+          <td><?php echo $subject['position']; ?></td>
+
+          <td><?php echo $subject['visible'] == 1 ? 'true' : 'false'; ?></td>
+
+    	    <td><?php echo $subject['menu_name']; ?></td>
+
+          <td><a href=<?php echo url_for("subjects/show.php?id=" . $subject['id']) ?>>View</a></td>
+
+          <td><a href="">Edit</a></td>
+
+          <td><a href="">Delete</a></td>
+    	</tr>
+      <?php } ?>
+  	</table>
+
+  </div>
+
 </div>
 
 <?php include(SHARE_PATH . '/staff/footer/footer.php') ?>
