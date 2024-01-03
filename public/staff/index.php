@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BA Staff</title>
-</head>
-<body>
-   <main>
-    <header>This is header</header>
-    <navigation>
-        <ul>
-            <li>
-                <a href="index.php">Menu</a>
-            </li>
-        </ul>
-    </navigation>
-    <footer>This is footer</footer>
-   </main> 
-</body>
-</html>
+<?php require_once('../../private/initialize.php')?>
+
+<?php require_once('../../private/shared/staff/header/header.php')?>
+
+<div class="max-w-7xl w-full bg-blue-50 px-8 py-4 justify-self-center">
+    <h1 class="text-2xl font-bold text-pink-500">This is content</h1>
+</div>
+
+<?php require_once('../../private/shared/staff/footer/footer.php')?>
