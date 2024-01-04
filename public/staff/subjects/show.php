@@ -6,6 +6,8 @@
 
 <?php
 $id = $_GET['id'] ?? '1';
+
+$subject = find_subject_by_id($id);
 ?>
 
 <div class="max-w-7xl w-full bg-blue-50 px-8 py-4 justify-self-center">
@@ -13,13 +15,28 @@ $id = $_GET['id'] ?? '1';
 
     <a href="<?php echo "index.php" ?>">Back to List</a>
 
-    <ul>
-        <li><a href="show.php?name=<?php echo ued("Anh Duc")?>">Link 1</a></li>
+    <div>
+        <dl>
+            <dt>Menu name</dt>
+            <dd>
+                <?php echo hsc($subject['menu_name']); ?>
+            </dd>
+        </dl>
 
-        <li><a href="show.php?company=<?php echo ued("Anh Duc")?>">Link 2</a></li>
+        <dl>
+            <dt>Position</dt>
+            <dd>
+                <?php echo hsc($subject['position']); ?>
+            </dd>
+        </dl>
 
-        <li><a href="show.php?query=<?php echo ued("*!@#")?>">Link 3</a></li>
-    </ul>
+        <dl>
+            <dt>Visible</dt>
+            <dd>
+                <?php echo hsc($subject['visible'] == '1' ? 'true' : 'false'); ?>
+            </dd>
+        </dl>
+    </div>
 </div>
 
 
