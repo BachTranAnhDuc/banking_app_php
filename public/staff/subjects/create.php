@@ -6,9 +6,14 @@
 <?php include(SHARE_PATH . '/staff/header/header.php') ?>
 
 <?php
-$menu_name = $_POST['menu_name'] ?? '';
-$position = $_POST['position'] ?? '';
-$visible = $_POST['visible'] ?? '';
+if (is_post_request()) {
+    $menu_name = $_POST['menu_name'] ?? '';
+    $position = $_POST['position'] ?? '';
+    $visible = $_POST['visible'] ?? '';
+}
+else {
+    redirect_to(url_for('subjects/new.php'));
+}
 
 // echo "Form parameters <br/>";
 // echo "Menu name: " . $menu_name . "<br/>";
