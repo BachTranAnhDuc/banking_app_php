@@ -2,6 +2,8 @@
 
 <?php
 $id = $_GET['id'] ?? '1'; // PHP > 7.0
+
+$page = find_page_by_id($id);
 ?>
 
 <?php $page_title='Show Pages'; $css_link="../../stylesheets/dist/style.css"?>
@@ -10,11 +12,37 @@ $id = $_GET['id'] ?? '1'; // PHP > 7.0
 
 <div class="max-w-7xl w-full bg-blue-50 px-8 py-4 justify-self-center">
 
-  <a class="back-link" href="<?php echo url_for('pages/index.php'); ?>">&laquo; Back to List</a>
+  <a href="<?php echo url_for('pages/index.php'); ?>">&laquo; Back to List</a>
 
-  <div class="page show">
+  <div>
+    <h1>
+      Page ID: <?php echo hsc($id); ?>
+    </h1>
 
-    Page ID: <?php echo hsc($id); ?>
+    <div>
+      <?php $subject = find_subject_by_id($page["subject_id"]); ?>
+
+      <dl>
+        <dt>Subject</dt>
+        <dd>
+          <?php echo hsc($subject['menu_name'])?>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt>Position</dt>
+        <dd>
+          <?php echo hsc($page['position'])?>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt>Visible</dt>
+        <dd>
+          <?php echo hsc($page['content'])?>
+        </dd>
+      </dl>
+    </div>
 
   </div>
 

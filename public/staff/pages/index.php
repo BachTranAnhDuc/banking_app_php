@@ -48,7 +48,7 @@
 
           <td><a class="action" href="<?php echo url_for('pages/edit.php?id=' . hsc(ued($page['id']))) ?>">Edit</a></td>
 
-          <td><a class="action" href="">Delete</a></td>
+          <td><a class="action" href="<?php echo url_for('pages/delete.php?id=' . hsc(ued($page['id']))) ?>">Delete</a></td>
 
     	</tr>
       <?php } ?>
