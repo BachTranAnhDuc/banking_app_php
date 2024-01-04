@@ -11,6 +11,8 @@ $id = $_GET['id'] ?? '1';
 <div class="max-w-7xl w-full bg-blue-50 px-8 py-4 justify-self-center">
     <h1><?php echo hsc($id) ?></h1>
 
+    <a href="<?php echo "index.php" ?>">Back to List</a>
+
     <ul>
         <li><a href="show.php?name=<?php echo ued("Anh Duc")?>">Link 1</a></li>
 

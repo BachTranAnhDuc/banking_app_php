@@ -18,7 +18,7 @@
     <h1>Subjects</h1>
 
     <div>
-      <a href="">Create New Subject</a>
+      <a href="<?php echo url_for("subjects/new.php") ?>">Create New Subject</a>
     </div>
 
   	<table>
@@ -50,7 +50,7 @@
 
           <td><a href=<?php echo url_for("subjects/show.php?id=" . $subject['id']) ?>>View</a></td>
 
-          <td><a href="">Edit</a></td>
+          <td><a href="<?php echo url_for("subjects/edit.php?id=" . $subject['id']) ?>">Edit</a></td>
 
           <td><a href="">Delete</a></td>
     	</tr>

@@ -1,6 +1,6 @@
 <?php require_once('../../../private/initialize.php') ?>
 
-<?php $page_title='Create Subject'; $css_link="../../stylesheets/dist/style.css"?>
+<?php $page_title='Edit Subject'; $css_link="../../stylesheets/dist/style.css"?>
 
 <?php include(SHARE_PATH . '/staff/header/header.php') ?>
 
@@ -30,9 +30,9 @@ else {
     </div>
 
     <div>
-        <h1>Create Subject</h1>
+        <h1>Edit Subject</h1>
 
-        <form action="<?php echo url_for("subjects/create.php"); ?>" method="post">
+        <form action="" method="post">
             <dl>
                 <dt>Menu Name</dt>
                 <dd>
@@ -56,7 +56,7 @@ else {
             </dl>
 
             <div>
-                <button type="submit">Create new subject</button>
+                <input type="submit" value="Edit Subject"/>
             </div>
         </form>
     </div>
