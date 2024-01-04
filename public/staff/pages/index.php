@@ -19,7 +19,7 @@
     <h1>Pages</h1>
 
     <div class="actions">
-      <a class="action" href="">Create New Page</a>
+      <a class="action" href="<?php echo url_for('pages/new.php') ?>">Create New Page</a>
     </div>
 
   	<table class="list">
@@ -51,7 +51,7 @@
 
           <td><a class="action" href="<?php echo url_for('pages/show.php?id=' . hsc(ued($page['id']))); ?>">View</a></td>
 
-          <td><a class="action" href="">Edit</a></td>
+          <td><a class="action" href="<?php echo url_for('pages/edit.php?id=' . hsc(ued($page['id']))) ?>">Edit</a></td>
 
           <td><a class="action" href="">Delete</a></td>
 
