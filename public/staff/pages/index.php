@@ -1,12 +1,7 @@
 <?php require_once('../../../private/initialize.php'); ?>
 
 <?php
-  $pages = [
-    ['id' => '1', 'position' => '1', 'visible' => '1', 'menu_name' => 'Bank'],
-    ['id' => '2', 'position' => '2', 'visible' => '1', 'menu_name' => 'History'],
-    ['id' => '3', 'position' => '3', 'visible' => '1', 'menu_name' => 'Leadership'],
-    ['id' => '4', 'position' => '4', 'visible' => '1', 'menu_name' => 'Contact Us'],
-  ];
+  $page_set = find_all_pages();
 ?>
 
 <?php $page_title='Pages'; $css_link="../../stylesheets/dist/style.css"?>
@@ -39,7 +34,7 @@
         <th>&nbsp;</th>
   	  </tr>
 
-      <?php foreach($pages as $page) { ?>
+      <?php while($page = mysqli_fetch_assoc($page_set)) { ?>
         <tr>
           <td><?php echo hsc($page['id']); ?></td>
           
@@ -58,6 +53,8 @@
     	</tr>
       <?php } ?>
   	</table>
+
+    <?php mysqli_free_result($page_set); ?>
 
   </div>
 
