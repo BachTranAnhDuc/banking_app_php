@@ -47,7 +47,7 @@
 
           <td><a href="<?php echo url_for("subjects/edit.php?id=" . $subject['id']) ?>">Edit</a></td>
 
-          <td><a href="">Delete</a></td>
+          <td><a href="<?php echo url_for("subjects/delete.php?id=" . $subject['id']) ?>">Delete</a></td>
     	</tr>
       <?php } ?>
   	</table>

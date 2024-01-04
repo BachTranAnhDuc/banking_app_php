@@ -6,18 +6,20 @@
 <?php include(SHARE_PATH . '/staff/header/header.php') ?>
 
 <?php
-if (is_post_request()) {
-    $menu_name = $_POST['menu_name'] ?? '';
-    $position = $_POST['position'] ?? '';
-    $visible = $_POST['visible'] ?? '';
-}
-else {
-    redirect_to(url_for('subjects/new.php'));
-}
+if(is_post_request()) {
+  $subject = [];
+  $subject['menu_name'] = $_POST['menu_name'] ?? '';
+  $subject['position'] = $_POST['position'] ?? '';
+  $subject['visible'] = $_POST['visible'] ?? '';
 
-// echo "Form parameters <br/>";
-// echo "Menu name: " . $menu_name . "<br/>";
-// echo "Visible: " . $visible . "<br/>";
+  $result = insert_subject($subject);
+  $new_id = mysqli_insert_id($db);
+
+  redirect_to(url_for('subjects/show.php?id=' . $new_id));
+
+} else {
+  redirect_to(url_for('subjects/new.php'));
+}
 ?>
 
 
@@ -26,15 +28,6 @@ else {
         <a href="<?php echo "index.php" ?>">Back to List</a>
     </div>
 
-    <div>
-        <p>Form Parameters</p>
-
-        <p>Menu name: <?php echo $menu_name ?></p>
-
-        <p>Position: <?php echo $position ?></p>
-
-        <p>Vsible: <?php echo $visible ?></p>
-    </div>
 </div>
 
 <?php include(SHARE_PATH . '/staff/footer/footer.php') ?>

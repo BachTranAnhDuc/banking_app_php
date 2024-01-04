@@ -33,7 +33,7 @@ $subject = find_subject_by_id($id);
         <dl>
             <dt>Visible</dt>
             <dd>
-                <?php echo hsc($subject['visible'] == '1' ? 'true' : 'false'); ?>
+                <?php echo $subject['visible'] == '1' ? 'true' : 'false'; ?>
             </dd>
         </dl>
     </div>
